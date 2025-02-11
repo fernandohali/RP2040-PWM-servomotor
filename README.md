@@ -1,12 +1,9 @@
-### Nome do Repositório:  
-**RP2040-PWM-Servomotor**
-
----
-### `README.md`
-```markdown
 # RP2040 PWM Servo
 
 Este projeto implementa o controle de um servomotor usando o módulo PWM do microcontrolador RP2040. A simulação é realizada no ambiente Wokwi e programada em C com o Pico SDK.
+
+## 🎥 Demonstração
+O vídeo com a simulação e os testes pode ser acessado [aqui](https://www.dropbox.com/scl/fi/lqiwfz5socgffu1uvjvki/microservo.mp4?rlkey=mkwgk948z598tm86am7ida16h&st=bs62vb23&dl=0).
 
 ## 📌 Objetivo
 - Configurar o PWM na GPIO 22 do Raspberry Pi Pico W para controlar um servomotor.
@@ -25,5 +22,4 @@ Este projeto implementa o controle de um servomotor usando o módulo PWM do micr
   - Simulador Wokwi integrado ao ambiente de desenvolvimento
   - GitHub para versionamento do código
 
-## 🎥 Demonstração
-O vídeo com a simulação e os testes pode ser acessado [aqui]().
+
