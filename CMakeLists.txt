@@ -19,7 +19,7 @@ set(sdkVersion 2.1.0)
 set(toolchainVersion 13_3_Rel1)
 set(picotoolVersion 2.1.0)
 set(picoVscode ${USERHOME}/.pico-sdk/cmake/pico-vscode.cmake)
-if (EXISTS ${picoVscode})
+if(EXISTS ${picoVscode})
     include(${picoVscode})
 endif()
 # ====================================================================================
@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(RP2040-PWM-servomotor RP2040-PWM-servomotor.c )
+add_executable(RP2040-PWM-servomotor RP2040-PWM-servomotor.c)
 
 pico_set_program_name(RP2040-PWM-servomotor "RP2040-PWM-servomotor")
 pico_set_program_version(RP2040-PWM-servomotor "0.1")
@@ -46,17 +46,19 @@ pico_enable_stdio_usb(RP2040-PWM-servomotor 0)
 
 # Add the standard library to the build
 target_link_libraries(RP2040-PWM-servomotor
-        pico_stdlib)
+    pico_stdlib
+    hardware_pwm)
 
 # Add the standard include files to the build
 target_include_directories(RP2040-PWM-servomotor PRIVATE
-        ${CMAKE_CURRENT_LIST_DIR}
+    ${CMAKE_CURRENT_LIST_DIR}
 )
 
 # Add any user requested libraries
-target_link_libraries(RP2040-PWM-servomotor 
-        
-        )
+target_link_libraries(RP2040-PWM-servomotor
+
+
+)
 
 pico_add_extra_outputs(RP2040-PWM-servomotor)
 

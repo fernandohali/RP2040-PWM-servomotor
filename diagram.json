@@ -1,0 +1,67 @@
+{
+    "version": 1,
+    "author": "Fernando Hali",
+    "editor": "wokwi",
+    "parts": [
+      {
+        "type": "board-pi-pico-w",
+        "id": "pico",
+        "top": 0,
+        "left": 0,
+        "attrs": {
+          "builder": "pico-sdk"
+        }
+      },
+      {
+        "type": "wokwi-servo",
+        "id": "servo1",
+        "top": 26.8,
+        "left": 134.4,
+        "attrs": {
+          "hornColor": "white"
+        }
+      }
+    ],
+    "connections": [
+      [
+        "pico:GP0",
+        "$serialMonitor:RX",
+        "",
+        []
+      ],
+      [
+        "pico:GP1",
+        "$serialMonitor:TX",
+        "",
+        []
+      ],
+      [
+        "pico:GND.8",
+        "servo1:GND",
+        "black",
+        [
+          "h42.26",
+          "v44.75"
+        ]
+      ],
+      [
+        "pico:3V3",
+        "servo1:V+",
+        "red",
+        [
+          "h32.66",
+          "v35.15"
+        ]
+      ],
+      [
+        "pico:GP18",
+        "servo1:PWM",
+        "orange",
+        [
+          "h32.66",
+          "v-70.41"
+        ]
+      ]
+    ],
+    "dependencies": {}
+  }
