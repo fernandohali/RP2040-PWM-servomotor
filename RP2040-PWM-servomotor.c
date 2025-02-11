@@ -15,9 +15,9 @@ int main(void)
 {
     // Movimento oscilatório do servo
     // Esse valores já estão no execicio,
-    const float MIN_DUTY_CYCLE = 0.025f;
-    const float MAX_DUTY_CYCLE = 0.12f;
-    const float STEP_DUTY_CYCLE = 0.00025f;
+    const float MIN_SERVO_DUTY_CYCLE = 0.025f;
+    const float SERVO_MAX_DUTY_CYCLE = 0.12f;
+    const float SERVO_STEP_DUTY = 0.00025f;
 
     // Inicializa os pinos, a UART e o stdio
     stdio_init_all();
@@ -39,11 +39,11 @@ int main(void)
         e depois de 180 a 0 graus, com isso ele vai entrar na função com
         o duty_cycle de 0.025 e vai aumentar até 0.12, depois ele vai diminuir de 0.12 até 0.025
         */
-        for (float duty = MIN_DUTY_CYCLE; duty <= MAX_DUTY_CYCLE; duty += STEP_DUTY_CYCLE)
+        for (float duty = MIN_SERVO_DUTY_CYCLE; duty <= SERVO_MAX_DUTY_CYCLE; duty += SERVO_STEP_DUTY)
         {
             set_servo_angle(duty, 10);
         }
-        for (float duty = MAX_DUTY_CYCLE; duty >= MIN_DUTY_CYCLE; duty -= STEP_DUTY_CYCLE)
+        for (float duty = SERVO_MAX_DUTY_CYCLE; duty >= MIN_SERVO_DUTY_CYCLE; duty -= SERVO_STEP_DUTY)
         {
             set_servo_angle(duty, 10);
         }
