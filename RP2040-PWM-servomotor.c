@@ -3,7 +3,7 @@
 #include "hardware/pwm.h"
 #include "pico/stdlib.h"
 
-#define SERVO_PIN 18
+#define SERVO_PIN 18 //para usar no LED RGB, use 11
 
 const uint32_t PWM_WRAP_VALUE = 62500;
 const float PWM_CLOCK_DIVIDER = 40.0f;
